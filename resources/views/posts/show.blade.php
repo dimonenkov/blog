@@ -4,7 +4,9 @@
 
 @section('content')
 
-<p class="lead">Post saved!</p>
+<h1>{{ $post->title }}</h1>
+
+<p class="lead">{{ $post->body }}</p>
 
 @endsection
 
