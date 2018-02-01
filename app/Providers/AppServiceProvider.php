@@ -5,6 +5,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Support\Facades\Schema; //Това се добавя
+
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191); //и това се добавя
     }
 
     /**
@@ -24,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //new
     }
+
+
 }
