@@ -102,7 +102,7 @@ class PostController extends Controller
         ));
 
         //Save data to the database
-        $post = Post::Find($id);
+        $post = Post::find($id);
 
         $post->title = $request->input('title');
         $post->body = $request->input('body');
@@ -123,6 +123,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        Session::flash('success', 'The Post was successfully deleted.');
+        return redirect()->route('posts.index');
     }
 }
