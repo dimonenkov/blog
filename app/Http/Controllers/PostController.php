@@ -8,6 +8,10 @@ use Session;
 
 class PostController extends Controller
 {
+    //Само регистрираните могат да виждат съдържанието на блога с тази функция
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

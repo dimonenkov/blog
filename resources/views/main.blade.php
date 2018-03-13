@@ -13,6 +13,8 @@
 
       @include('partials._messages')		
 
+      {{ Auth::check() ? "Logget In" : "Logget Out"}}
+
       @yield('content')
 
       @include('partials._footer')
